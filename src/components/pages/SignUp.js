@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 export default function SignUp() {
   // States for registration
 const [name, setName] = useState('');
