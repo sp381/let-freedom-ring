@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import NavTabs from './NavTabs';
 import Home from './pages/Home';
-import About from './pages/About';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
+import Contests from './pages/Contests';
+import Munchers from './pages/Munchers';
+import SignUp from './pages/SignUp';
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -13,13 +13,13 @@ export default function PortfolioContainer() {
     if (currentPage === 'Home') {
       return <Home />;
     }
-    if (currentPage === 'About') {
-      return <About />;
+    if (currentPage === 'Contests') {
+      return <Contests />;
     }
-    if (currentPage === 'Blog') {
-      return <Blog />;
+    if (currentPage === 'Munchers') {
+      return <Munchers />;
     }
-    return <Contact />;
+    return <SignUp />;
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
