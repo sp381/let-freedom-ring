@@ -1,22 +1,112 @@
-import React from 'react';
+import React, { useState } from "react";
 
 export default function SignUp() {
+  // States for registration
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // States for checking the errors
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+
+  // Handling the name change
+  const handleName = (e) => {
+    setName(e.target.value);
+    setSubmitted(false);
+  };
+
+  // Handling the email change
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+    setSubmitted(false);
+  };
+
+  // Handling the password change
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+    setSubmitted(false);
+  };
+
+  // Handling the form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name === "" || email === "" || password === "") {
+      setError(true);
+    } else {
+      setSubmitted(true);
+      setError(false);
+    }
+  };
+
+  // Showing success message
+  const successMessage = () => {
+    return (
+      <div
+        className="success"
+        style={{
+          display: submitted ? "" : "none",
+        }}
+      >
+        <h3>User {name} successfully registered!!</h3>
+      </div>
+    );
+  };
+
+  // Showing error message if error is true
+  const errorMessage = () => {
+    return (
+      <div
+        className="error"
+        style={{
+          display: error ? "" : "none",
+        }}
+      >
+        <h1>Please enter all the fields</h1>
+      </div>
+    );
+  };
+
   return (
-    <div>
-      <h1>SignUp Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+    <div className="form">
+      <div>{/* <h1>Let's Eat!</h1> */}</div>
+
+      {/* Calling to the methods */}
+      <div className="messages">
+        {errorMessage()}
+        {successMessage()}
+      </div>
+
+      <form>
+        {/* Labels and inputs for form data */}
+        <label className="label">Name</label>
+        <input
+          onChange={handleName}
+          className="input"
+          value={name}
+          type="text"
+        />
+
+        <label className="label">Email</label>
+        <input
+          onChange={handleEmail}
+          className="input"
+          value={email}
+          type="email"
+        />
+
+        <label className="label">Password</label>
+        <input
+          onChange={handlePassword}
+          className="input"
+          value={password}
+          type="password"
+        />
+
+        <button onClick={handleSubmit} className="btn" type="submit">
+          Submit
+        </button>
+      </form>
     </div>
   );
 }
