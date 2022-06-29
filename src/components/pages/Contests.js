@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-class Contest extends Component {
+class Contests extends Component {
   componentDidMount() {
     this.props.fetchNames(this.props.nameIds);
   }
@@ -39,7 +39,7 @@ class Contest extends Component {
 
         <div className="panel panel-info">
           <div className="panel-heading">
-            <h3 className="panel-title">Propose a New Name</h3>
+            <h3 className="panel-title">Propose a New Contest</h3>
           </div>
           <div className="panel-body">
             <form onSubmit={this.handleSubmit}>
@@ -68,7 +68,7 @@ class Contest extends Component {
   }
 }
 
-Contest.propTypes = {
+Contests.propTypes = {
   _id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   contestListClick: PropTypes.func.isRequired,
@@ -78,4 +78,4 @@ Contest.propTypes = {
   addName: PropTypes.func.isRequired,
 };
 
-export default Contest;
+export default Contests;
