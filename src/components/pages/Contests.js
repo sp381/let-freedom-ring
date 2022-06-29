@@ -1,17 +1,81 @@
-import React from 'react';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-export default function Contests() {
-  return (
-    <div>
-      <h1>Contests Page</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
-    </div>
-  );
+class Contest extends Component {
+  componentDidMount() {
+    this.props.fetchNames(this.props.nameIds);
+  }
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.addName(this.refs.newNameInput.value, this.props._id);
+    this.refs.newNameInput.value = "";
+  };
+  render() {
+    return (
+      <div className="Contest">
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">Contest Description</h3>
+          </div>
+          <div className="panel-body">
+            <div className="contest-description">{this.props.description}</div>
+          </div>
+        </div>
+
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">Proposed Names</h3>
+          </div>
+          <div className="panel-body">
+            <ul className="list-group">
+              {this.props.nameIds.map((nameId) => (
+                <li key={nameId} className="list-group-item">
+                  {this.props.lookupName(nameId).name}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="panel panel-info">
+          <div className="panel-heading">
+            <h3 className="panel-title">Propose a New Name</h3>
+          </div>
+          <div className="panel-body">
+            <form onSubmit={this.handleSubmit}>
+              <div className="input-group">
+                <input
+                  type="text"
+                  placeholder="New Name Here..."
+                  ref="newNameInput"
+                  className="form-control"
+                />
+                <span className="input-group-btn">
+                  <button type="submit" className="btn btn-info">
+                    Sumbit
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div className="home-link link" onClick={this.props.contestListClick}>
+          Contest List
+        </div>
+      </div>
+    );
+  }
 }
+
+Contest.propTypes = {
+  _id: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  contestListClick: PropTypes.func.isRequired,
+  fetchNames: PropTypes.func.isRequired,
+  nameIds: PropTypes.array.isRequired,
+  lookupName: PropTypes.func.isRequired,
+  addName: PropTypes.func.isRequired,
+};
+
+export default Contest;
