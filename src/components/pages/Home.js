@@ -14,7 +14,7 @@ export default function Home() {
         tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
         porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
         vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum pri
+        fames ac ante ipsum pr
       </p>
     </div>
   );
