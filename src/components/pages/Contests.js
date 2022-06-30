@@ -1,19 +1,3 @@
-// import React from "react";
-
-// export default function Contests() {
-//   return (
-//     <div>
-//       <h1>Contests Page</h1>
-// <p>
-//   Love to eat? well so do we, here you will find a list of upcoming eating
-//   contest. If you want to participate or just enjoy the show you have come
-//   to the right place. Hope your enjoy our website. We are not responsible
-//   for any weight gain, enter at your own risk.
-// </p>
-//     </div>
-//   );
-// }
-
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
@@ -28,7 +12,8 @@ class Contests extends Component {
 
   render() {
     return (
-      <div className="Contest">
+      <div className="contests">
+        <h1>Contests</h1>
         <p>
           Love to eat? well so do we, here you will find a list of upcoming
           eating contest. If you want to participate or just enjoy the show you
@@ -36,9 +21,10 @@ class Contests extends Component {
           responsible for any weight gain, enter at your own risk.
         </p>
         <div className="contest-description">{this.state.description}</div>
-        <div className="link home-link" onClick={this.state.contestListClick}>
-          Contest List
-        </div>
+        <div
+          className="link home-link"
+          onClick={this.state.contestListClick}
+        ></div>
       </div>
     );
   }
