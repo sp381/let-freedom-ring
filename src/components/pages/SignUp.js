@@ -62,7 +62,7 @@ export default function SignUp() {
           display: error ? "" : "none",
         }}
       >
-        <h1>Please enter all the fields</h1>
+        <h2>Please enter all the fields</h2>
       </div>
     );
   };
@@ -79,6 +79,7 @@ export default function SignUp() {
 
       <form>
         {/* Labels and inputs for form data */}
+        <br />
         <label className="label">Name</label>
         <input
           onChange={handleName}
@@ -86,7 +87,8 @@ export default function SignUp() {
           value={name}
           type="text"
         />
-
+        <br />
+        <br />
         <label className="label">Email</label>
         <input
           onChange={handleEmail}
@@ -94,7 +96,8 @@ export default function SignUp() {
           value={email}
           type="email"
         />
-
+        <br />
+        <br />
         <label className="label">Password</label>
         <input
           onChange={handlePassword}
@@ -102,11 +105,30 @@ export default function SignUp() {
           value={password}
           type="password"
         />
-
+        <br />
+        <br />
         <button onClick={handleSubmit} className="btn" type="submit">
-          Submit
+          Let's Eat!
         </button>
       </form>
+      <br />
+      {/* Contact Form */}
+      {/* <br />
+<br />
+<form>
+  <label>Contact</label>
+  <br />
+  <br />
+  <label className="label">Name</label> <br />
+  <input onChange={handleName} className="input"
+  value={name} type="text" />
+  <br />
+  <br />
+
+  <button onClick={handleSubmit} className="btn" type="submit">
+  Submit
+  </button>
+</form> */}
     </div>
   );
 }
