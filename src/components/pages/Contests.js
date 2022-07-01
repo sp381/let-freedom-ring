@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import Logo from "../../assets/get in my belly.gif";
 
 class Contests extends Component {
   constructor(props) {
@@ -12,14 +13,12 @@ class Contests extends Component {
 
   render() {
     return (
-      <div className="contests">
+      <div className="Contests">
         <h1>Contests</h1>
-        <p>
-          Love to eat? well so do we, here you will find a list of upcoming
-          eating contest. If you want to participate or just enjoy the show you
-          have come to the right place. Hope your enjoy our website. We are not
-          responsible for any weight gain, enter at your own risk.
-        </p>
+        <div className="Logo">
+          <img src={Logo} alt="Logo Image" style={{ width: "150px" }} />
+        </div>
+        <p>See a list of upcoming contests, let us know what you think.</p>
         <div className="contest-description">{this.state.description}</div>
         <div
           className="link home-link"
