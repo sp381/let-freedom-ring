@@ -1,19 +1,9 @@
-// const resolvers = {
-//   Query: {
-//     helloWorld: () => {
-//       return "Hello world";
-//     },
-//   },
-// };
-
-const { Contest } = require("../models");
-
-// module.exports = resolvers;
+const { Reaction } = require("../models");
 
 const resolvers = {
   Query: {
-    contests: async () => {
-      return Contest.find().sort({ createdAt: -1 });
+    reactions: async () => {
+      return Reaction.find().sort({ createdAt: -1 });
     },
   },
 };
