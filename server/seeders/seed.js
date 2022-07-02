@@ -1,11 +1,22 @@
-const db = require('../config/connection');
-const { Thought } = require('../models');
-const thoughtSeeds = require('./thoughtSeeds.json');
+const faker = require("faker");
 
-db.once('open', async () => {
-  await Thought.deleteMany({});
-  await Thought.create(thoughtSeeds);
+const db = require("../config/connection");
+const { User } = require("../models");
 
-  console.log('all done!');
+db.once("open", async () => {
+  await User.deleteMany({});
+
+  // create user data
+  const userData = [];
+
+  for (let i = 0; i < 50; i += 1) {
+    const username = faker.internet.userName();
+    const email = faker.internet.email(username);
+    const password = faker.internet.password();
+
+    userData.push({ username, email, password });
+  }
+
+  console.log("all done!");
   process.exit(0);
 });
