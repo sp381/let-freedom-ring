@@ -5,6 +5,14 @@ const resolvers = {
     reactions: async () => {
       return Reaction.find().sort({ createdAt: -1 });
     },
+    // Mutation: {
+    //   addUser: async (parent, args) => {
+    //     const user = await user.create(args);
+
+    //     return user;
+    //   },
+    //   login: async () => {},
+    // },
   },
 };
 
