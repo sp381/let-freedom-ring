@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/let-freedom-ring',
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/commit-to-eat',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
