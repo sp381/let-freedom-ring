@@ -1,4 +1,4 @@
-const faker = require("faker");
+const fakers = require("fakers");
 
 const db = require("../config/connection");
 const { User } = require("../models");
@@ -10,12 +10,14 @@ db.once("open", async () => {
   const userData = [];
 
   for (let i = 0; i < 50; i += 1) {
-    const username = faker.internet.userName();
-    const email = faker.internet.email(username);
-    const password = faker.internet.password();
+    const username = fakers.internet.userName();
+    const email = fakers.internet.email(username);
+    const password = fakers.internet.password();
 
     userData.push({ username, email, password });
   }
+  
+  // create reactions ??
 
   console.log("all done!");
   process.exit(0);
