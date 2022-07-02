@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const db = require("../config/connection");
 const { Contest } = require("../models");
 const contestSeeds = require("./contestSeeds.json");
@@ -5,6 +6,26 @@ const contestSeeds = require("./contestSeeds.json");
 db.once("open", async () => {
   await Contest.deleteMany({});
   await Contest.create(contestSeeds);
+=======
+const faker = require('faker');
+
+const db = require('../config/connection');
+const { User } = require('../models');
+
+db.once('open', async () => {
+  await User.deleteMany({});
+
+  // create user data
+  const userData = [];
+
+  for (let i = 0; i < 50; i += 1) {
+    const username = faker.internet.userName();
+    const email = faker.internet.email(username);
+    const password = faker.internet.password();
+
+    userData.push({ username, email, password });
+  }
+>>>>>>> munchers
 
   console.log("all done!");
   process.exit(0);
