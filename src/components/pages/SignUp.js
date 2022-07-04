@@ -112,23 +112,6 @@ export default function SignUp() {
         </button>
       </form>
       <br />
-      {/* Contact Form */}
-      {/* <br />
-<br />
-<form>
-  <label>Contact</label>
-  <br />
-  <br />
-  <label className="label">Name</label> <br />
-  <input onChange={handleName} className="input"
-  value={name} type="text" />
-  <br />
-  <br />
-
-  <button onClick={handleSubmit} className="btn" type="submit">
-  Submit
-  </button>
-</form> */}
     </div>
   );
 }

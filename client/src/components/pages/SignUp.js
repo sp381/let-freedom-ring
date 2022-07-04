@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import './SignUp.css';
 
 export default function SignUp() {
   // States for registration
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  //const [login, setLogin] = useState("");
 
   // States for checking the errors
   const [submitted, setSubmitted] = useState(false);
@@ -52,6 +54,24 @@ export default function SignUp() {
       </div>
     );
   };
+
+  //   // Handling the login change
+  //   const handleLogin = (e) => {
+  //     setLogin(e.target.value);
+  //     setSubmitted(false);
+  //   };
+  // //Handling the Login
+  // const handleSubmitLogin= (e) => {
+  //   e.preventDefault();
+  //   if (email === "" || password === "") {
+  //     setError(true);
+  //   } else {
+  //     setSubmitted(true);
+  //     setError(false);
+  //   }
+  // }
+
+
 
   // Showing error message if error is true
   const errorMessage = () => {
@@ -107,28 +127,31 @@ export default function SignUp() {
         />
         <br />
         <br />
-        <button onClick={handleSubmit} className="btn" type="submit">
+        <button onClick={handleSubmit} class="btn" type="submit">
           Let's Eat!
         </button>
-      </form>
-      <br />
-      {/* Contact Form */}
-      {/* <br />
-<br />
-<form>
-  <label>Contact</label>
-  <br />
-  <br />
-  <label className="label">Name</label> <br />
-  <input onChange={handleName} className="input"
-  value={name} type="text" />
-  <br />
-  <br />
 
-  <button onClick={handleSubmit} className="btn" type="submit">
-  Submit
-  </button>
-</form> */}
-    </div>
+         {/* <label className="label">Login</label>
+        <input
+          onChange={handleLogin}
+          className="input"
+          value={email, password}
+          type="text"
+        />
+
+        <h3>Please Login</h3>
+      <label>
+        <p>Username</p>
+        <input type="text" />
+      </label>
+      <label>
+        <p>Password</p>
+        <input type="password" />
+      </label>
+      <div>
+        <button type="submit">Submit</button>
+      </div> */}
+      </form>
+    </div> 
   );
 }
