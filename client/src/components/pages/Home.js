@@ -42,7 +42,7 @@ const CountdownTimer = ({countdownTimestampMs}) => {
             <p>Love to eat? well so do we, here you will find a list of upcoming eating contest. If you want to participate or just enjoy the show you have come to the right place. Hope your enjoy our website. We are not responsible for any weight gain, enter at your own risk.</p>
         </div>
         <div className="Homepage">
-          <img src={Homepage} alt="Boris eats" style={{ width: "300px" }} />
+          <img src={Homepage} alt="hot dog eatting" style={{ width: "400px" }} />
         </div>
         </main>
        
