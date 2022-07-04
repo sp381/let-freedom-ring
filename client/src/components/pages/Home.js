@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react';
 import './CountdownTimer.css';
 import {getRemainingTimeUntilMsTimestamp} from './Utils/CountdownTimerUtils';
+import Homepage from "../../assets/homepage.jpg";
+
 
 const defaultRemainingTime = {
     seconds: '00',
@@ -25,6 +27,7 @@ const CountdownTimer = ({countdownTimestampMs}) => {
 
     return(
         <main>
+            <div>countdown:Hot dog contest</div>
         <div className="countdown-timer">
             <span>{remainingTime.days}</span>
             <span>days</span>
@@ -37,6 +40,9 @@ const CountdownTimer = ({countdownTimestampMs}) => {
         </div>
         <div>
             <p>Love to eat? well so do we, here you will find a list of upcoming eating contest. If you want to participate or just enjoy the show you have come to the right place. Hope your enjoy our website. We are not responsible for any weight gain, enter at your own risk.</p>
+        </div>
+        <div className="Homepage">
+          <img src={Homepage} alt="Boris eats" style={{ width: "300px" }} />
         </div>
         </main>
        
