@@ -1,9 +1,13 @@
 import React from "react";
-import PortfolioContainer from "./components/PortfolioContainer";
+import MainContainer from "./components/MainContainer";
 import './App.css';
-import CountdownTimer from './components/pages/Home';
+import CountdownTimer from "./components/pages/Home";
+import Footer from "./components/Footer";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-const App = () => <PortfolioContainer />;
+
+
+const App = () => <MainContainer />;
 
 
 function Timer() {
@@ -11,6 +15,7 @@ function Timer() {
       <div className="App">
        <CountdownTimer
        countdownTimestampMs={1659983662000}/>
+        <Footer/>
       </div>
     );
   }
