@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Contests from "./pages/Contests";
 import Munchers from "./pages/Munchers";
 import SignUp from "./pages/SignUp";
+import Footer from "./Footer";
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -30,6 +31,7 @@ export default function PortfolioContainer() {
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
+      <Footer/>
     </div>
   );
 }

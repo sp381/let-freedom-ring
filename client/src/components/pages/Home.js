@@ -2,11 +2,13 @@ import {useState, useEffect} from 'react';
 import './CountdownTimer.css';
 import {getRemainingTimeUntilMsTimestamp} from './Utils/CountdownTimerUtils';
 import Homepage from "../../assets/homepage.jpg";
+import { Button } from 'semantic-ui-react'
+
 
 
 const defaultRemainingTime = {
     seconds: '00',
-    minutes: '00',
+    minutes: '10',
     hours: '00',
     days: '00'
 }
@@ -24,9 +26,9 @@ const CountdownTimer = ({countdownTimestampMs}) => {
     function updateRemainingTime(countdown) {
         setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
     }
-
     return(
         <main>
+<Button>Click Here</Button>
             <div>countdown:Hot dog contest</div>
         <div className="countdown-timer">
             <span>{remainingTime.days}</span>
@@ -39,7 +41,7 @@ const CountdownTimer = ({countdownTimestampMs}) => {
             <span>seconds</span>
         </div>
         <div>
-            <p>Love to eat? well so do we, here you will find a list of upcoming eating contest. If you want to participate or just enjoy the show you have come to the right place. Hope your enjoy our website. We are not responsible for any weight gain, enter at your own risk.</p>
+            <p>Love to eat? well so do we, here you will find a list of upcoming eating contest. If you want to participate or just enjoy the show you have come to the right place. Hope you enjoy our website. We are not responsible for any weight gain, enter at your own risk.</p>
         </div>
         <div className="Homepage">
           <img src={Homepage} alt="hot dog eatting" style={{ width: "400px" }} />
