@@ -1,17 +1,14 @@
 import React from "react";
 import Boris from "../../assets/boris eats.PNG";
-import { Container, Row , Col} from 'react-bootstrap';
-
+import { Card, CardImg } from 'react-bootstrap';
 
 export default function Munchers() {
   return (
     <div>
-      <h1>Munchers Page</h1>
-      <p>
-        Here is a list of some very hungry people. Join the ranks to eat and
-        compete around the world
-      </p>
-      {/* <Col> */}
+      <Card className="h2 mb-2 pt-2 font-weight-bold text-secondary">
+      <h2>"Some Very Hungry People"</h2>
+        <h4>Join the ranks to eat and compete around the world!</h4>
+      </Card>
       <div className="Boris">
         <h1>Boris</h1>
         <div className="Boris">
@@ -51,8 +48,7 @@ export default function Munchers() {
           </button>
         </div>
       </div>
-      {/* </Col> */}
-    </div>  
+    </div>
   );
 }
 
