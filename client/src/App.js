@@ -6,7 +6,7 @@ import CountdownTimer from './components/pages/Home';
 const App = () => <PortfolioContainer />;
 
 
-function Timer() {
+ function Timer() {
     return (
       <div className="App">
        <CountdownTimer
@@ -14,4 +14,5 @@ function Timer() {
       </div>
     );
   }
-export default App;
+  
+export default (App );
