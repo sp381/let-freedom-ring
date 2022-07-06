@@ -30,7 +30,7 @@ export default function Munchers() {
         Favourite food: mayonnaise, pickles and herring.
       </p1>
       <button type="button" className='m-2'>
-            <a href= "" rel="noreferrer">bio</a>
+            {/* <a href= "" rel="noreferrer">bio</a> */}
       </button>
 
       <div>
@@ -51,7 +51,7 @@ export default function Munchers() {
         Favourite food: 7 layer burrito from Taco Bell, Huevos Rancheros and tequilla.
       </p1>
       <button type="button" className='m-2'>
-            <a href= "" rel="noreferrer">bio</a>
+            {/* <a href= "" rel="noreferrer">bio</a> */}
       </button>
 
       <div>
@@ -73,7 +73,7 @@ export default function Munchers() {
         Favourite food: 3 course dinners, car snacks and coffee.
       </p1>
       <button type="button" className='m-2'>
-            <a href= "" rel="noreferrer">bio</a>
+            {/* <a href= "" rel="noreferrer">bio</a> */}
       </button>
 
       <div>
@@ -95,10 +95,7 @@ export default function Munchers() {
         Canadian bacon and ice cold water with ice.
       </p1>
       <button type="button" className='m-2'>
-            <a href= "" rel="noreferrer">bio</a>
-<<<<<<< HEAD
-          </button>
-=======
+            {/* <a href= "" rel="noreferrer">bio</a> */}
       </button>
 
       <div>
@@ -108,7 +105,6 @@ export default function Munchers() {
               <CommentList comments={comments} title="Some food for thought please" />
           )}
       </div>
->>>>>>> 214ab47bf7ec0b2e6c53dcd5fe0d359f7e788222
     </div>
   );
 }
