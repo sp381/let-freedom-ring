@@ -1,13 +1,15 @@
 import React from 'react';
 //import Button from 'react-bootstrap/Button';
-
+import { Card } from 'react-bootstrap';
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     
 
     <ul className="nav nav-tabs">
       <header>
+        <Card className="text-uppercase ">
           <h1>Commit to eat</h1>
+          </Card>
         </header>
       <li className="nav-item">
         
