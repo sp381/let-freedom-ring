@@ -5,6 +5,7 @@ import Sarah from "../../assets/sarah eats.jpg";
 import CommentList from '../../components/CommentList';
 import { useQuery } from '@apollo/client';
 import { QUERY_COMMENTS } from '../../utils/queries';
+import { Card, Row } from 'react-bootstrap';
 
 export default function Munchers() {
   
@@ -14,17 +15,23 @@ export default function Munchers() {
 
   return (
     <div>
-      
-      <h1>Munchers Page</h1>
+      <br/>
+      <Card className="d-flex justify-content-center p-2">
       <p>
-        Here is a list of some very hungry people. Join the ranks to eat and
+        Some very hungry people! 
+        <br/>
+        Join the ranks to eat and
         compete around the world
       </p>
+      </Card>
+
       <div className="Boris">
+        <Row className="col">
         <h1>Boris</h1>
         <div className="Boris">
           <img src={Boris} alt="Boris eats" style={{ width: "300px" }} />
         </div>
+        </Row>
       </div>
       <p1>Sometimes he is hungry, but when he is, nothing can stop him.<br></br>
         Favourite food: mayonnaise, pickles and herring.
@@ -42,10 +49,12 @@ export default function Munchers() {
       </div>
 
       <div className="Oscar">
+        <Row className="col">
         <h1>Oscar</h1>
         <div className="Oscar">
           <img src={Oscar} alt="Oscar chills" style={{ width: "300px" }} />
         </div>
+        </Row>
       </div>
       <p1>Full time dad and part time nachos muncher.<br></br>
         Favourite food: 7 layer burrito from Taco Bell, Huevos Rancheros and tequilla.
@@ -109,34 +118,4 @@ export default function Munchers() {
   );
 }
 
-      // <section className="munchers-section">
-      //     <div className="munchers">
-      //         <article className="muncher">
-      //             <h3 className="muncher-centered">Oscar</h3>
-                  
-      //             <a href="" target="_blank" id="img1" rel="noreferrer"><img src={require("../../assets/")} alt=""></img></a>
-      //         </article>
-      //     </div>
-      //     <div className="munchers">
-      //      <article className="muncher">
-      //             <h3 className="muncher-centered">Boris</h3>
-              
-      //             <a href="" target="_blank" rel="noreferrer"><img src={require("../../assets/")} alt=""></img></a>
-      //         </article>
-      //     </div>
-      //     <div className="munchers">
-      //         <article className="muncher">
-      //             <h3 className="muncher-centered">Carter</h3>
-                  
-      //             <a href="" target="_blank" id="img1" rel="noreferrer"><img src={require("../../assets/")} alt=""></img></a>
-      //         </article>
-      //     </div>
-      //     <div className="munchers">
-      //         <article className="muncher">
-      //             <h3 className="muncher-centered">Sarah</h3>
-                  
-      //             <a href="" target="_blank" id="img1" rel="noreferrer"><img src={require("../../assets/")} alt=""></img></a>
-      //         </article>
-      //     </div>
-      // </section>
 
