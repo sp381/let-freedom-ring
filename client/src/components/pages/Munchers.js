@@ -1,5 +1,7 @@
 import React from "react";
 import Boris from "../../assets/boris eats.PNG";
+import Oscar from "../../assets/oscar chills.jpg";
+import Sarah from "../../assets/sarah eats.jpg";
 
 
 export default function Munchers() {
@@ -20,20 +22,20 @@ export default function Munchers() {
         </div>
       </div>
 
-      <div className="Sarah">
-        <h1>Boris</h1>
-        <div className="Sarah">
-          <img src={Boris} alt="Sarah eats" style={{ width: "300px" }} />
+      <div className="Oscar">
+        <h1>Oscar</h1>
+        <div className="Oscar">
+          <img src={Oscar} alt="Oscar chills" style={{ width: "300px" }} />
           <button type="button" className='m-2'>
             <a href= "" rel="noreferrer">bio</a>
           </button>
         </div>
       </div>
 
-      <div className="Oscar">
-        <h1>Boris</h1>
-        <div className="Oscar">
-          <img src={Boris} alt="Oscar eats" style={{ width: "300px" }} />
+      <div className="Sarah">
+        <h1>Sarah</h1>
+        <div className="Sarah">
+          <img src={Sarah} alt="Sarah eats" style={{ width: "300px" }} />
           <button type="button" className='m-2'>
             <a href= "" rel="noreferrer">bio</a>
           </button>
@@ -41,7 +43,7 @@ export default function Munchers() {
       </div>
 
       <div className="Carter">
-        <h1>Boris</h1>
+        <h1>Carter</h1>
         <div className="Carter">
           <img src={Boris} alt="Carter eats" style={{ width: "300px" }} />
           <button type="button" className='m-2'>
