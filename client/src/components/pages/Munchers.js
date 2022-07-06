@@ -5,7 +5,7 @@ import Sarah from "../../assets/sarah eats.jpg";
 import CommentList from '../../components/CommentList';
 import { useQuery } from '@apollo/client';
 import { QUERY_COMMENTS } from '../../utils/queries';
-import { Card } from 'react-bootstrap';
+import { Card, Row } from 'react-bootstrap';
 
 export default function Munchers() {
   
@@ -16,7 +16,7 @@ export default function Munchers() {
   return (
     <div>
       <br/>
-      <Card className="d-flex justify-content-center p-3 font-weight-italic">
+      <Card className="d-flex justify-content-center p-2">
       <p>
         Some very hungry people! 
         <br/>
@@ -26,10 +26,12 @@ export default function Munchers() {
       </Card>
 
       <div className="Boris">
+        <Row className="col">
         <h1>Boris</h1>
         <div className="Boris">
           <img src={Boris} alt="Boris eats" style={{ width: "300px" }} />
         </div>
+        </Row>
       </div>
       <p1>Sometimes hungry, but when he is, nothing can stop him.<br></br>
         Favourite food: mayonnaise, pickles and herring.
@@ -47,10 +49,12 @@ export default function Munchers() {
       </div>
 
       <div className="Oscar">
+        <Row className="col">
         <h1>Oscar</h1>
         <div className="Oscar">
           <img src={Oscar} alt="Oscar chills" style={{ width: "300px" }} />
         </div>
+        </Row>
       </div>
       <p1>Full time dad and part time nachos muncher.<br></br>
         Favourite food: 7 layer burrito from Taco Bell, Huevos Rancheros and tequilla.
