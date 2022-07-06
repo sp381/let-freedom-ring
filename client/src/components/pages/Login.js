@@ -112,7 +112,7 @@ export default function SignUp() {
         <br />
         <br />
         <button onClick={handleSubmit} className="btn" type="submit">
-          Keep eating!
+          Keep on eating!
         </button>
       </form>
     </div>
