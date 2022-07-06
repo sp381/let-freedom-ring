@@ -5,7 +5,7 @@ import './CountdownTimer.css';
 // import {getRemainingTimeUntilMsTimestamp} from './Utils/CountdownTimerUtils';
 import Homepage from "../../assets/homepage.jpg";
 import Button from 'react-bootstrap/Button';
-import { Container, Row , Col} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Timer from '../Timer';
 
 // const defaultRemainingTime = {
