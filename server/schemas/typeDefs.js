@@ -9,9 +9,9 @@ const typeDefs = gql`
     email: String
     reactions: [Reaction]
   }
-  type Reaction {
+  type Comment {
     _id: ID
-    reactionBody: String
+    commentnBody: String
     createdAt: String
     username: String 
   }
