@@ -5,6 +5,7 @@ import Sarah from "../../assets/sarah eats.jpg";
 import CommentList from '../../components/CommentList';
 import { useQuery } from '@apollo/client';
 import { QUERY_COMMENTS } from '../../utils/queries';
+import { Card } from 'react-bootstrap';
 
 export default function Munchers() {
   
@@ -14,12 +15,16 @@ export default function Munchers() {
 
   return (
     <div>
-      
-      <h1>Munchers Page</h1>
+      <br/>
+      <Card className="d-flex justify-content-center p-3 font-weight-italic">
       <p>
-        Here is a list of some very hungry people. Join the ranks to eat and
+        Some very hungry people! 
+        <br/>
+        Join the ranks to eat and
         compete around the world
       </p>
+      </Card>
+
       <div className="Boris">
         <h1>Boris</h1>
         <div className="Boris">
