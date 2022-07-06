@@ -1,4 +1,6 @@
 import {useState, useEffect} from 'react';
+import { useQuery } from '@apollo/client';
+import { QUERY_COMMENTS } from '../../utils/queries';
 import './CountdownTimer.css';
 // import {getRemainingTimeUntilMsTimestamp} from './Utils/CountdownTimerUtils';
 import Homepage from "../../assets/homepage.jpg";
@@ -14,6 +16,12 @@ import Timer from '../Timer';
 // }
 
 const CountdownTimer = ({countdownTimestampMs}) => {
+    const { loading, data } = useQuery(QUERY_COMMENTS);
+    const comments = data?.comments || [];
+    console.log(comments);
+
+
+    
     // const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
 
     // useEffect(() => {
