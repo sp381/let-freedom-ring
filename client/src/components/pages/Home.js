@@ -34,10 +34,9 @@ const CountdownTimer = ({countdownTimestampMs}) => {
        
         <main>
             <div>Featured contest of the month - American Taste Away “Super Elvis” Challenge. Countdown to chowdown:</div>
-        
-            <Button type="button">eat
-            <a href= "https://www.americantasteaway.com/" rel="noreferrer">now!</a>
-      </Button>
+            <Button type="button">
+            <a href= "https://www.americantasteaway.com/" rel="noreferrer">eat</a>
+            </Button>
       
         <Timer
         countdownTimestampMs={1659983662000}
