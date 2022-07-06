@@ -5,10 +5,11 @@ import { Card, CardImg } from 'react-bootstrap';
 export default function Munchers() {
   return (
     <div>
-      <Card className="h2 mb-2 pt-2 font-weight-bold text-secondary">
+      <Card className="h2 mb-2 pt-2 font-weight-bold text-secondary text-center">
       <h2>"Some Very Hungry People"</h2>
-        <h4>Join the ranks to eat and compete around the world!</h4>
+        <h4 className="pt-1 text-center">Join the ranks to eat and compete around the world!</h4>
       </Card>
+      
       <div className="Boris">
         <h1>Boris</h1>
         <div className="Boris">
