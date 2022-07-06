@@ -7,7 +7,6 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
-    reactions: [Reaction]
   }
   type Comment {
     _id: ID
@@ -17,7 +16,6 @@ const typeDefs = gql`
   type Query {
     users: [User]
     user(username: String): User
-    reactions(username: String): [Reaction]
   }
 
   type Mutation {
