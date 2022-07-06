@@ -114,34 +114,4 @@ export default function Munchers() {
   );
 }
 
-      // <section className="munchers-section">
-      //     <div className="munchers">
-      //         <article className="muncher">
-      //             <h3 className="muncher-centered">Oscar</h3>
-                  
-      //             <a href="" target="_blank" id="img1" rel="noreferrer"><img src={require("../../assets/")} alt=""></img></a>
-      //         </article>
-      //     </div>
-      //     <div className="munchers">
-      //      <article className="muncher">
-      //             <h3 className="muncher-centered">Boris</h3>
-              
-      //             <a href="" target="_blank" rel="noreferrer"><img src={require("../../assets/")} alt=""></img></a>
-      //         </article>
-      //     </div>
-      //     <div className="munchers">
-      //         <article className="muncher">
-      //             <h3 className="muncher-centered">Carter</h3>
-                  
-      //             <a href="" target="_blank" id="img1" rel="noreferrer"><img src={require("../../assets/")} alt=""></img></a>
-      //         </article>
-      //     </div>
-      //     <div className="munchers">
-      //         <article className="muncher">
-      //             <h3 className="muncher-centered">Sarah</h3>
-                  
-      //             <a href="" target="_blank" id="img1" rel="noreferrer"><img src={require("../../assets/")} alt=""></img></a>
-      //         </article>
-      //     </div>
-      // </section>
 
