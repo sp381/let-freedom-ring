@@ -63,7 +63,7 @@ export default function Munchers() {
       </p1>
       <button type="button" className='m-2'>
             <a href= "" rel="noreferrer">bio</a>
-      </button>
+          </button>
     </div>
   );
 }
