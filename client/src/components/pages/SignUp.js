@@ -77,6 +77,13 @@ export default function SignUp() {
         {successMessage()}
       </div>
 
+      <div>
+        <p1>
+          Sign up to enter a competition so you can eat forever and <br></br>
+          share your thoughts on who is the best muncher of them all!
+        </p1>
+      </div>
+
       <form>
         {/* Labels and inputs for form data */}
         <br />
