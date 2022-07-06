@@ -1,15 +1,15 @@
 import React from 'react';
 //import Button from 'react-bootstrap/Button';
-
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
+import { Card } from 'react-bootstrap';
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     
 
     <ul className="nav nav-tabs">
       <header>
+        <Card className="text-uppercase ">
           <h1>Commit to eat</h1>
+          </Card>
         </header>
       <li className="nav-item">
         
