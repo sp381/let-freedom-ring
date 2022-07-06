@@ -14,6 +14,39 @@ export default function Munchers() {
         <h1>Boris</h1>
         <div className="Boris">
           <img src={Boris} alt="Boris eats" style={{ width: "300px" }} />
+          <button type="button" className='m-2'>
+            <a href= "" rel="noreferrer">bio</a>
+          </button>
+        </div>
+      </div>
+
+      <div className="Sarah">
+        <h1>Boris</h1>
+        <div className="Sarah">
+          <img src={Boris} alt="Sarah eats" style={{ width: "300px" }} />
+          <button type="button" className='m-2'>
+            <a href= "" rel="noreferrer">bio</a>
+          </button>
+        </div>
+      </div>
+
+      <div className="Oscar">
+        <h1>Boris</h1>
+        <div className="Oscar">
+          <img src={Boris} alt="Oscar eats" style={{ width: "300px" }} />
+          <button type="button" className='m-2'>
+            <a href= "" rel="noreferrer">bio</a>
+          </button>
+        </div>
+      </div>
+
+      <div className="Carter">
+        <h1>Boris</h1>
+        <div className="Carter">
+          <img src={Boris} alt="Carter eats" style={{ width: "300px" }} />
+          <button type="button" className='m-2'>
+            <a href= "" rel="noreferrer">bio</a>
+          </button>
         </div>
       </div>
     </div>

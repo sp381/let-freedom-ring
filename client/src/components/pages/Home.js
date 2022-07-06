@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import './CountdownTimer.css';
 import {getRemainingTimeUntilMsTimestamp} from './Utils/CountdownTimerUtils';
 import Homepage from "../../assets/homepage.jpg";
+import Button from 'react-bootstrap/Button';
 
 
 const defaultRemainingTime = {
@@ -24,10 +25,11 @@ const CountdownTimer = ({countdownTimestampMs}) => {
     function updateRemainingTime(countdown) {
         setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
     }
-
     return(
         <main>
-            <div>countdown:Hot dog contest</div>
+            <Button>click</Button>
+
+            <div>Featured contest of the month - hotdog eating contest. Countdown to chowdown:</div>
         <div className="countdown-timer">
             <span>{remainingTime.days}</span>
             <span>days</span>
