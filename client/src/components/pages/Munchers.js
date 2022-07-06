@@ -96,9 +96,6 @@ export default function Munchers() {
       </p1>
       <button type="button" className='m-2'>
             <a href= "" rel="noreferrer">bio</a>
-<<<<<<< HEAD
-          </button>
-=======
       </button>
 
       <div>
@@ -108,7 +105,6 @@ export default function Munchers() {
               <CommentList comments={comments} title="Some food for thought please" />
           )}
       </div>
->>>>>>> 214ab47bf7ec0b2e6c53dcd5fe0d359f7e788222
     </div>
   );
 }
