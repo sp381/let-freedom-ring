@@ -1,45 +1,44 @@
 import {useState, useEffect} from 'react';
 import './CountdownTimer.css';
-import {getRemainingTimeUntilMsTimestamp} from './Utils/CountdownTimerUtils';
+// import {getRemainingTimeUntilMsTimestamp} from './Utils/CountdownTimerUtils';
 import Homepage from "../../assets/homepage.jpg";
 import Button from 'react-bootstrap/Button';
+import { Container, Row , Col} from 'react-bootstrap';
+import Timer from '../Timer';
 
-
-const defaultRemainingTime = {
-    seconds: '00',
-    minutes: '00',
-    hours: '00',
-    days: '00'
-}
+// const defaultRemainingTime = {
+//     seconds: '00',
+//     minutes: '00',
+//     hours: '00',
+//     days: '00'
+// }
 
 const CountdownTimer = ({countdownTimestampMs}) => {
-    const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
+    // const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            updateRemainingTime(countdownTimestampMs);
-        }, 1000);
-        return () => clearInterval(intervalId);
-    },[countdownTimestampMs]);
+    // useEffect(() => {
+    //     const intervalId = setInterval(() => {
+    //         updateRemainingTime(countdownTimestampMs);
+    //     }, 1000);
+    //     return () => clearInterval(intervalId);
+    // },[countdownTimestampMs]);
 
-    function updateRemainingTime(countdown) {
-        setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
-    }
+    // function updateRemainingTime(countdown) {
+    //     setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
+    // }
     return(
+        <Container>
+
+       
         <main>
             <Button>click</Button>
 
             <div>Featured contest of the month - hotdog eating contest. Countdown to chowdown:</div>
-        <div className="countdown-timer">
-            <span>{remainingTime.days}</span>
-            <span>days</span>
-            <span className="two-numbers">{remainingTime.hours}</span>
-            <span>hours</span>
-            <span className="two-numbers">{remainingTime.minutes}</span>
-            <span>minutes</span>
-            <span className="two-numbers">{remainingTime.seconds}</span>
-            <span>seconds</span>
-        </div>
+       
+        <Timer
+        countdownTimestampMs={1659983662000}
+        />
+
         <div>
             <p>Love to eat? well so do we, here you will find a list of upcoming eating contest. If you want to participate or just enjoy the show you have come to the right place. Hope your enjoy our website. We are not responsible for any weight gain, enter at your own risk.</p>
         </div>
@@ -47,7 +46,7 @@ const CountdownTimer = ({countdownTimestampMs}) => {
           <img src={Homepage} alt="hot dog eatting" style={{ width: "400px" }} />
         </div>
         </main>
-       
+        </Container>
     );
 }
 
