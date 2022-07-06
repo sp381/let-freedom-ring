@@ -2,11 +2,19 @@ import React from "react";
 import Boris from "../../assets/boris eats.PNG";
 import Oscar from "../../assets/oscar chills.jpg";
 import Sarah from "../../assets/sarah eats.jpg";
-
+import CommentList from '../../components/CommentList';
+import { useQuery } from '@apollo/client';
+import { QUERY_COMMENTS } from '../../utils/queries';
 
 export default function Munchers() {
+  
+  const { loading, data } = useQuery(QUERY_COMMENTS);
+  const comments = data?.comments || [];
+  console.log(comments);
+
   return (
     <div>
+      
       <h1>Munchers Page</h1>
       <p>
         Here is a list of some very hungry people. Join the ranks to eat and
@@ -25,6 +33,14 @@ export default function Munchers() {
             <a href= "" rel="noreferrer">bio</a>
       </button>
 
+      <div>
+          {loading ? (
+              <div>Loading...</div>
+          ) : (
+              <CommentList comments={comments} title="Some food for thought please" />
+          )}
+      </div>
+
       <div className="Oscar">
         <h1>Oscar</h1>
         <div className="Oscar">
@@ -37,6 +53,15 @@ export default function Munchers() {
       <button type="button" className='m-2'>
             <a href= "" rel="noreferrer">bio</a>
       </button>
+
+      <div>
+          {loading ? (
+              <div>Loading...</div>
+          ) : (
+              <CommentList comments={comments} title="Some food for thought please" />
+          )}
+      </div>
+      
 
       <div className="Sarah">
         <h1>Sarah</h1>
@@ -51,6 +76,14 @@ export default function Munchers() {
             <a href= "" rel="noreferrer">bio</a>
       </button>
 
+      <div>
+          {loading ? (
+              <div>Loading...</div>
+          ) : (
+              <CommentList comments={comments} title="Some food for thought please" />
+          )}
+      </div>
+
       <div className="Carter">
         <h1>Carter</h1>
         <div className="Carter">
@@ -64,6 +97,14 @@ export default function Munchers() {
       <button type="button" className='m-2'>
             <a href= "" rel="noreferrer">bio</a>
       </button>
+
+      <div>
+          {loading ? (
+              <div>Loading...</div>
+          ) : (
+              <CommentList comments={comments} title="Some food for thought please" />
+          )}
+      </div>
     </div>
   );
 }
