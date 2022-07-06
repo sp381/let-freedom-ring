@@ -4,12 +4,19 @@ import './App.css';
 // import { Button } from 'semantic-ui-react'
 import CountdownTimer from "./components/pages/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from "react-bootstrap";
 
 
 
 
-
-const App = () => <MainContainer />;
+const App = () => { 
+  return (
+    <Container>
+    <MainContainer />
+    </Container>
+  )
+ 
+} 
 
 
  function Timer() {
@@ -22,4 +29,4 @@ const App = () => <MainContainer />;
     );
   }
   
-export default (App );
+export default App;
