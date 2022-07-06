@@ -2,8 +2,10 @@ import {useState, useEffect} from 'react';
 import './CountdownTimer.css';
 // import {getRemainingTimeUntilMsTimestamp} from './Utils/CountdownTimerUtils';
 import Homepage from "../../assets/homepage.jpg";
-import { Container, Row , Col} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import { Container } from 'react-bootstrap';
 import Timer from '../Timer';
+
 
 // const defaultRemainingTime = {
 //     seconds: '00',
@@ -13,6 +15,7 @@ import Timer from '../Timer';
 // }
 
 const CountdownTimer = ({countdownTimestampMs}) => {
+ 
     // const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
 
     // useEffect(() => {
@@ -30,9 +33,11 @@ const CountdownTimer = ({countdownTimestampMs}) => {
 
        
         <main>
-
-            <div className=''>Featured contest of the month: Countdown to chowdown:</div>
-       
+            <div>Featured contest of the month - American Taste Away “Super Elvis” Challenge. Countdown to chowdown:</div>
+            <Button type="button">eat
+            <a href= "https://www.americantasteaway.com/" rel="noreferrer"></a>
+            </Button>
+      
         <Timer
         countdownTimestampMs={1659983662000}
         />

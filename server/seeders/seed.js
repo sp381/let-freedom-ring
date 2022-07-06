@@ -1,22 +1,32 @@
-const faker = require("faker");
+// const faker = require('faker');
+const userSeeds = require('./userSeed.json');
+const commentSeeds = require('./commentSeed.json');
+const db = require('../config/connection');
+const { Comment, User } = require('../models');
 
-const db = require("../config/connection");
-const { User } = require("../models");
+db.once('open', async () => {
+  try {
+    await Comment.deleteMany({});
+    await User.deleteMany({});
 
-db.once("open", async () => {
-  await User.deleteMany({});
+    await User.create(userSeeds);
 
-  // create user data
-  const userData = [];
-
-  for (let i = 0; i < 50; i += 1) {
-    const username = faker.internet.userName();
-    const email = faker.internet.email(username);
-    const password = faker.internet.password();
-
-    userData.push({ username, email, password });
+    for (let i = 0; i < commentSeeds.length; i++) {
+      const { _id, commentAuthor } = await Comment.create(commentSeeds[i]);
+      const user = await User.findOneAndUpdate(
+        { username: commentAuthor },
+        {
+          $addToSet: {
+            comments: _id,
+          },
+        }
+      );
+    }
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
   }
 
-  console.log("all done!");
+  console.log('finished!');
   process.exit(0);
 });

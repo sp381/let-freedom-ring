@@ -76,7 +76,11 @@ export default function SignUp() {
         {errorMessage()}
         {successMessage()}
       </div>
-
+      <div>
+        <p1>
+          Login when you are hungry for more munching!
+        </p1>
+      </div>
       <form>
         {/* Labels and inputs for form data */}
         <br />
@@ -108,7 +112,7 @@ export default function SignUp() {
         <br />
         <br />
         <button onClick={handleSubmit} className="btn" type="submit">
-          Let's Eat!
+          Keep on eating!
         </button>
       </form>
     </div>
