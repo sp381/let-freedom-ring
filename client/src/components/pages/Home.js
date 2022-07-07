@@ -26,9 +26,9 @@ const CountdownTimer = ({countdownTimestampMs}) => {
         </CardGroup>
             
             <div>
-            <Card className="">
+
                 Featured contest of the month - American Taste Away “Super Elvis” Challenge. Countdown to chowdown:
-                </Card>
+
                 <br/>
                 </div>
 

@@ -26,8 +26,12 @@ export default function Contest(props) {
       <div className="Logo">
         <img src={Logo} alt="Logo Image" style={{ width: "500px" }} />
          </div>
-      <p>Ready, set, Gorge</p>
-      <p>Believe it or not eating is a sport, checkout out a few of the countries eating contest. You think you have what it takes to win any of these contest?</p>
+         <br/>
+      <p>Ready, Set, Gorge!</p>
+      <p>Believe it or not eating is a sport. 
+        <br/>
+        Checkout out a few of the countries eating contest! Do uou think you have what it takes to win any of these contest?</p>
+        <br/>
       <div>
         <p>Nathans Famous fourth of July Hot Dog Eating Contest</p>
         <ul>
