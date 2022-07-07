@@ -53,4 +53,6 @@ MIT license
 
 borisveselov@yahoo.com
 github.com/boris-veselov
-  
+
+Oscar Hernandez [Email]( Oscarangel.hernandez1@gmail.com) [Git Hub](https://github.com/OSCARHERNANDEZ2022)
+
