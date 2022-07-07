@@ -33,11 +33,11 @@ export default function Munchers() {
         </div>
         </Row>
       </div>
-      <p1>Sometimes hungry, but when he is, nothing can stop him.<br></br>
+      <p1>Sometimes he is hungry, but when he is, nothing can stop him.<br></br>
         Favourite food: mayonnaise, pickles and herring.
       </p1>
       <button type="button" className='m-2'>
-            <a href= "" rel="noreferrer">bio</a>
+            <a href= "https://github.com/Boris-Veselov" rel="noreferrer">bio</a>
       </button>
 
       <div>
