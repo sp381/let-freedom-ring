@@ -20,6 +20,7 @@ const CountdownTimer = ({countdownTimestampMs}) => {
                 <br/>
                 Browser the upcoming eating contest or show off your skills and enter to eat!
                 <br/>
+                <br/>
                 * We are not responsible for any weight gain, enter at your own risk.</p>
         </div>
         </CardGroup>
