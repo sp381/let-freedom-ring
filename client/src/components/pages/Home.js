@@ -33,7 +33,7 @@ const CountdownTimer = ({countdownTimestampMs}) => {
                 </div>
 
             <Button type="button">eat
-            <a href= "https://www.americantasteaway.com/" rel="noreferrer"></a>
+            <a href= "https://www.americantasteaway.com/" rel="noreferrer">now</a>
             </Button>
       
         <Timer
