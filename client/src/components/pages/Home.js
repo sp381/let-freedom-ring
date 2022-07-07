@@ -16,7 +16,11 @@ const CountdownTimer = ({countdownTimestampMs}) => {
             <br/>
             <CardGroup className="text-capitalize d-flex justify-content-center h3 mb-4 w-100 text-center">
         <div>
-            <p>Love to eat? well so do we, here you will find a list of upcoming eating contest. If you want to participate or just enjoy the show you have come to the right place. Hope your enjoy our website. We are not responsible for any weight gain, enter at your own risk.</p>
+            <p>Love to eat? Well so do we! 
+                <br/>
+                Browser the upcoming eating contest or show off your skills and enter to eat!
+                <br/>
+                * We are not responsible for any weight gain, enter at your own risk.</p>
         </div>
         </CardGroup>
             
