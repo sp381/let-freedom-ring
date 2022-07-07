@@ -20,14 +20,14 @@ export default function Munchers() {
     <div>
 
       <br/>
-      <Card className="d-flex justify-content-center p-2">
+      {/* <Card className="d-flex justify-content-center p-2"> */}
       <p>
         Some very hungry people! 
         <br/>
         Join the ranks to eat and
         compete around the world
       </p>
-      </Card>
+      {/* </Card> */}
 
       <Row>
       <Col>

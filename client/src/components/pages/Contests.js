@@ -24,10 +24,8 @@ export default function Contest(props) {
     <div className="Contests">
       {/* {setContest("potato fest")} */}
       <div className="Logo">
-        <Card className="d-flex justify-content-center align-center p-2">
         <img src={Logo} alt="Logo Image" style={{ width: "500px" }} />
-        </Card>
-      </div>
+         </div>
       <p>Ready, set, Gorge</p>
       <p>Believe it or not eating is a sport, checkout out a few of the countries eating contest. You think you have what it takes to win any of these contest?</p>
       <div>
