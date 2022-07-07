@@ -39,7 +39,7 @@ To build a single page React portolio app, first create a new React app by runni
 
 ## Usage
 
-To run it locally, open it http://localhost:3000 to view it in your browser by running apm start
+To run it locally, open it http://localhost:3000 to view it in your browser by running npm run develop
 
 ## Contribution
 
