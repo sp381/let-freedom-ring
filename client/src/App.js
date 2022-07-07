@@ -5,6 +5,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 import CountdownTimer from "./components/pages/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from "react-bootstrap";
+import background from "./food.jpg";
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -18,12 +19,13 @@ const client = new ApolloClient({
 
 const App = () => { 
   return (
+    <div style={{ backgroundImage: `url(${background})` }}>
     <ApolloProvider client={client}>
     <Container>
     <MainContainer />
     </Container>
     </ApolloProvider>
-
+</div>
   )
  
 } 

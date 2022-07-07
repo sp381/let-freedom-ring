@@ -8,6 +8,7 @@ import Colorado from "../../assets/slopper.jpg";
 import Casepork from "../../assets/case pork.jpg"
 import Tamale from "../../assets/tamale.webp"
 import './Contests.css';
+import { Card } from 'react-bootstrap';
 // import { SlackSelector } from 'react-reactions';
 // import contests from "../../utils/contests";
 // import PropTypes from "prop-types";
@@ -22,9 +23,10 @@ export default function Contest(props) {
   return (
     <div className="Contests">
       {/* {setContest("potato fest")} */}
-      <h1>Contests</h1>
       <div className="Logo">
+        <Card className="d-flex justify-content-center align-center p-2">
         <img src={Logo} alt="Logo Image" style={{ width: "500px" }} />
+        </Card>
       </div>
       <p>Ready, set, Gorge</p>
       <p>Believe it or not eating is a sport, checkout out a few of the countries eating contest. You think you have what it takes to win any of these contest?</p>

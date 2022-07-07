@@ -48,7 +48,7 @@ export default function SignUp() {
           display: submitted ? "" : "none",
         }}
       >
-        <h3>User {name} successfully registered!!</h3>
+        <h3>User {name} successfully logged in!!</h3>
       </div>
     );
   };
